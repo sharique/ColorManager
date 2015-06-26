@@ -1,0 +1,22 @@
+<Palettes>
+	<Palette name="Empty Palette">
+		<Color COLOR="#C3C3C3"></Color>
+		<Color COLOR="#617C8F"></Color>
+		<Color COLOR="#C8E0D8"></Color>
+		<Color COLOR="#88C0B8"></Color>
+		<Color COLOR="#DBC9BF"></Color>
+		<Color COLOR="#A3C928"></Color>
+		<Color COLOR="#BFDEBE"></Color>
+		<Color COLOR="#268126"></Color>
+		<Color COLOR="#DDF1DD"></Color>
+		<Color COLOR="#FDD001"></Color>
+		<Color COLOR="#FF9900"></Color>
+		<Color COLOR="#DEDEDE"></Color>
+		<Color COLOR="#FEFEFC"></Color>
+		<Color COLOR="#5BB0DB"></Color>
+	</Palette>
+	<Palette name="blank">
+		<Color COLOR="#FEFEFC"></Color>
+		<Color COLOR="#5BB0DB"></Color>
+	</Palette>
+</Palettes>
