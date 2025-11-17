@@ -232,7 +232,7 @@ namespace ColorManager
 		protected virtual void OnBtnDeleteClicked (object sender, System.EventArgs e)
 		{
 			mgr.DeletePalette(combobox1.ActiveText);
-			combobox1.RemoveText(combobox1.Active);
+			combobox1.Remove(combobox1.Active);
 		}
 		
 		

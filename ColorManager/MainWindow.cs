@@ -75,7 +75,7 @@ public partial class MainWindow : Gtk.Window
 		hbox2.Visible = true;
 		entry1.Text = comboboxentry1.ActiveText;
 		int j = comboboxentry1.Active;
-		comboboxentry1.RemoveText (j);
+		comboboxentry1.Remove (j);
 		btnUpdate.Visible = true;
 
 	}
@@ -94,7 +94,7 @@ public partial class MainWindow : Gtk.Window
 		xmldoc.Save(fsxml);
 		
 		int i  = comboboxentry1.Active;
-		comboboxentry1.RemoveText(i);*/
+		comboboxentry1.Remove(i);*/
 		protected virtual void onBtnDeleteClicked (object sender, System.EventArgs e)
 	{
 		string s = comboboxentry1.ActiveText;
@@ -111,7 +111,7 @@ public partial class MainWindow : Gtk.Window
 		xmldoc.Save (fsxml);
 
 		int i = comboboxentry1.Active;
-		comboboxentry1.RemoveText (i);
+		comboboxentry1.Remove (i);
 
 	}
 
