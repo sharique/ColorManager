@@ -20,10 +20,10 @@ namespace ColorManager
 
 		public void BuildForm ()
 		{
-			loadList ();
+			LoadList ();
 		}
 
-		public void loadList ()
+		public void LoadList ()
 		{
 			List<string> lst = mgr.GetList ();
 			foreach (var item in lst) {
@@ -34,40 +34,40 @@ namespace ColorManager
 
 		protected virtual void OnCombobox1Changed (object sender, System.EventArgs e)
 		{
-			loadPlt (combobox1.ActiveText);
+			LoadPalette (combobox1.ActiveText);
 		}
 
-		protected void loadPlt (string name)
+		protected void LoadPalette (string name)
 		{
-			clearClrBtns ();
+			ClearClrBtns ();
 			IEnumerable<XElement> elem = mgr.GetPalette (name).Descendants ();
 			lblDebug.Text = "Palette "+ name+ " loaded.";
 			tbClr.Text="";
 			int cnt = elem.Count ();
 			
 			if (cnt >= 1)
-				clrBtn1.Color = getColor (elem.ElementAt (0).Attribute ("COLOR").Value.ToString ());
+				clrBtn1.Color = GetColor(elem.ElementAt (0).Attribute ("COLOR").Value.ToString ());
 			if (cnt >= 2)
-				clrBtn2.Color = getColor (elem.ElementAt (1).Attribute ("COLOR").Value.ToString ());
+				clrBtn2.Color = GetColor (elem.ElementAt (1).Attribute ("COLOR").Value.ToString ());
 			if (cnt >= 3)
-				clrBtn3.Color = getColor (elem.ElementAt (2).Attribute ("COLOR").Value.ToString ());
+				clrBtn3.Color = GetColor (elem.ElementAt (2).Attribute ("COLOR").Value.ToString ());
 			if (cnt >= 4)
-				clrBtn4.Color = getColor (elem.ElementAt (3).Attribute ("COLOR").Value.ToString ());
+				clrBtn4.Color = GetColor (elem.ElementAt (3).Attribute ("COLOR").Value.ToString ());
 			if (cnt >= 5)
-				clrBtn5.Color = getColor (elem.ElementAt (4).Attribute ("COLOR").Value.ToString ());
+				clrBtn5.Color = GetColor (elem.ElementAt (4).Attribute ("COLOR").Value.ToString ());
 			if (cnt >= 6)
-				clrBtn6.Color = getColor (elem.ElementAt (5).Attribute ("COLOR").Value.ToString ());
+				clrBtn6.Color = GetColor (elem.ElementAt (5).Attribute ("COLOR").Value.ToString ());
 			if (cnt >= 7)
-				clrBtn7.Color = getColor (elem.ElementAt (6).Attribute ("COLOR").Value.ToString ());
+				clrBtn7.Color = GetColor (elem.ElementAt (6).Attribute ("COLOR").Value.ToString ());
 			if (cnt >= 8)
-				clrBtn8.Color = getColor (elem.ElementAt (7).Attribute ("COLOR").Value.ToString ());
+				clrBtn8.Color = GetColor (elem.ElementAt (7).Attribute ("COLOR").Value.ToString ());
 			if (cnt >= 9)
-				clrBtn9.Color = getColor (elem.ElementAt (8).Attribute ("COLOR").Value.ToString ());
+				clrBtn9.Color = GetColor (elem.ElementAt (8).Attribute ("COLOR").Value.ToString ());
 			if (cnt >= 10)
-				clrBtn10.Color = getColor (elem.ElementAt (9).Attribute ("COLOR").Value.ToString ());
+				clrBtn10.Color = GetColor (elem.ElementAt (9).Attribute ("COLOR").Value.ToString ());
 		}
 
-		protected void clearClrBtns ()
+		protected void ClearClrBtns ()
 		{
 			clrBtn1.Color = new Gdk.Color (255, 255, 255);
 			clrBtn2.Color = new Gdk.Color (255, 255, 255);
@@ -81,7 +81,7 @@ namespace ColorManager
 			clrBtn10.Color = new Gdk.Color (255, 255, 255);
 		}
 
-		protected Gdk.Color getColor (string clr1)
+		protected Gdk.Color GetColor (string clr1)
 		{
 			string r1 = clr1.Substring (1, 2);
 			
@@ -232,7 +232,7 @@ namespace ColorManager
 		protected virtual void OnBtnDeleteClicked (object sender, System.EventArgs e)
 		{
 			mgr.DeletePalette(combobox1.ActiveText);
-			combobox1.RemoveText(combobox1.Active);
+			combobox1.Remove(combobox1.Active);
 		}
 		
 		

@@ -33,7 +33,7 @@ public partial class MainWindow
 	
 	private global::Gtk.HBox hbox1;
 	
-	private global::Gtk.ComboBoxEntry comboboxentry1;
+	private global::Gtk.ComboBoxText comboboxentry1;
 	
 	private global::Gtk.Button btnNew;
 	
@@ -103,42 +103,42 @@ public partial class MainWindow
 		// Widget MainWindow
 		this.UIManager = new global::Gtk.UIManager ();
 		global::Gtk.ActionGroup w1 = new global::Gtk.ActionGroup ("Default");
-		this.Help = new global::Gtk.Action ("Help", global::Mono.Unix.Catalog.GetString ("Help"), null, null);
-		this.Help.ShortLabel = global::Mono.Unix.Catalog.GetString ("Help");
+		this.Help = new global::Gtk.Action ("Help", "Help", null, null);
+		this.Help.ShortLabel = "Help";
 		w1.Add (this.Help, null);
-		this.AboutUs = new global::Gtk.Action ("AboutUs", global::Mono.Unix.Catalog.GetString ("About us"), null, null);
-		this.AboutUs.ShortLabel = global::Mono.Unix.Catalog.GetString ("About us");
+		this.AboutUs = new global::Gtk.Action ("AboutUs", "About us", null, null);
+		this.AboutUs.ShortLabel = "About us";
 		w1.Add (this.AboutUs, null);
-		this.help = new global::Gtk.Action ("help", global::Mono.Unix.Catalog.GetString ("About us"), null, "gtk-help");
-		this.help.ShortLabel = global::Mono.Unix.Catalog.GetString ("_Help");
+		this.help = new global::Gtk.Action ("help", "About us", null, "gtk-help");
+		this.help.ShortLabel = "_Help";
 		w1.Add (this.help, null);
 		this.colorPicker = new global::Gtk.Action ("colorPicker", null, null, "gtk-color-picker");
 		w1.Add (this.colorPicker, null);
-		this.selectColor = new global::Gtk.Action ("selectColor", global::Mono.Unix.Catalog.GetString ("_Color"), null, "gtk-select-color");
-		this.selectColor.ShortLabel = global::Mono.Unix.Catalog.GetString ("_Color");
+		this.selectColor = new global::Gtk.Action ("selectColor", "_Color", null, "gtk-select-color");
+		this.selectColor.ShortLabel = "_Color";
 		w1.Add (this.selectColor, null);
-		this.quit = new global::Gtk.Action ("quit", global::Mono.Unix.Catalog.GetString ("_Quit"), null, "gtk-quit");
-		this.quit.ShortLabel = global::Mono.Unix.Catalog.GetString ("_Quit");
+		this.quit = new global::Gtk.Action ("quit", "_Quit", null, "gtk-quit");
+		this.quit.ShortLabel = "_Quit";
 		w1.Add (this.quit, null);
-		this.File = new global::Gtk.Action ("File", global::Mono.Unix.Catalog.GetString ("  File"), null, null);
-		this.File.ShortLabel = global::Mono.Unix.Catalog.GetString ("  File");
+		this.File = new global::Gtk.Action ("File", "  File", null, null);
+		this.File.ShortLabel = "  File";
 		w1.Add (this.File, null);
-		this.quit1 = new global::Gtk.Action ("quit1", global::Mono.Unix.Catalog.GetString ("_Quit"), null, "gtk-quit");
-		this.quit1.ShortLabel = global::Mono.Unix.Catalog.GetString ("_Quit");
+		this.quit1 = new global::Gtk.Action ("quit1", "_Quit", null, "gtk-quit");
+		this.quit1.ShortLabel = "_Quit";
 		w1.Add (this.quit1, null);
-		this.Help1 = new global::Gtk.Action ("Help1", global::Mono.Unix.Catalog.GetString ("Help"), null, null);
-		this.Help1.ShortLabel = global::Mono.Unix.Catalog.GetString ("Help");
+		this.Help1 = new global::Gtk.Action ("Help1", "Help", null, null);
+		this.Help1.ShortLabel = "Help";
 		w1.Add (this.Help1, null);
-		this.Help2 = new global::Gtk.Action ("Help2", global::Mono.Unix.Catalog.GetString ("Help"), null, null);
-		this.Help2.ShortLabel = global::Mono.Unix.Catalog.GetString ("Help");
+		this.Help2 = new global::Gtk.Action ("Help2", "Help", null, null);
+		this.Help2.ShortLabel = "Help";
 		w1.Add (this.Help2, null);
-		this.selectColor1 = new global::Gtk.Action ("selectColor1", global::Mono.Unix.Catalog.GetString ("About Us"), null, "gtk-dialog-info");
-		this.selectColor1.ShortLabel = global::Mono.Unix.Catalog.GetString ("About Us");
+		this.selectColor1 = new global::Gtk.Action ("selectColor1", "About Us", null, "gtk-dialog-info");
+		this.selectColor1.ShortLabel = "About Us";
 		w1.Add (this.selectColor1, null);
 		this.UIManager.InsertActionGroup (w1, 0);
 		this.AddAccelGroup (this.UIManager.AccelGroup);
 		this.Name = "MainWindow";
-		this.Title = global::Mono.Unix.Catalog.GetString ("ColorPicker");
+		this.Title = "ColorPicker";
 		this.Icon = global::Stetic.IconLoader.LoadIcon (this, "gtk-select-color", global::Gtk.IconSize.Menu);
 		this.WindowPosition = ((global::Gtk.WindowPosition)(4));
 		this.DefaultWidth = 13;
@@ -160,7 +160,7 @@ public partial class MainWindow
 		this.hbox1.Name = "hbox1";
 		this.hbox1.Spacing = 6;
 		// Container child hbox1.Gtk.Box+BoxChild
-		this.comboboxentry1 = global::Gtk.ComboBoxEntry.NewText ();
+		this.comboboxentry1 = new global::Gtk.ComboBoxText ();
 		this.comboboxentry1.Name = "comboboxentry1";
 		this.hbox1.Add (this.comboboxentry1);
 		global::Gtk.Box.BoxChild w3 = ((global::Gtk.Box.BoxChild)(this.hbox1 [this.comboboxentry1]));
@@ -172,7 +172,7 @@ public partial class MainWindow
 		this.btnNew.CanFocus = true;
 		this.btnNew.Name = "btnNew";
 		this.btnNew.UseUnderline = true;
-		this.btnNew.Label = global::Mono.Unix.Catalog.GetString ("New");
+		this.btnNew.Label = "New";
 		global::Gtk.Image w4 = new global::Gtk.Image ();
 		w4.Pixbuf = global::Stetic.IconLoader.LoadIcon (this, "gtk-add", global::Gtk.IconSize.Menu);
 		this.btnNew.Image = w4;
@@ -186,7 +186,7 @@ public partial class MainWindow
 		this.button2.CanFocus = true;
 		this.button2.Name = "button2";
 		this.button2.UseUnderline = true;
-		this.button2.Label = global::Mono.Unix.Catalog.GetString ("Edit");
+		this.button2.Label = "Edit";
 		global::Gtk.Image w6 = new global::Gtk.Image ();
 		w6.Pixbuf = global::Stetic.IconLoader.LoadIcon (this, "gtk-edit", global::Gtk.IconSize.Menu);
 		this.button2.Image = w6;
@@ -200,7 +200,7 @@ public partial class MainWindow
 		this.btnDelete.CanFocus = true;
 		this.btnDelete.Name = "btnDelete";
 		this.btnDelete.UseUnderline = true;
-		this.btnDelete.Label = global::Mono.Unix.Catalog.GetString ("Delete");
+		this.btnDelete.Label = "Delete";
 		global::Gtk.Image w8 = new global::Gtk.Image ();
 		w8.Pixbuf = global::Stetic.IconLoader.LoadIcon (this, "gtk-clear", global::Gtk.IconSize.Menu);
 		this.btnDelete.Image = w8;
@@ -221,7 +221,7 @@ public partial class MainWindow
 		// Container child hbox2.Gtk.Box+BoxChild
 		this.lblPaletteName = new global::Gtk.Label ();
 		this.lblPaletteName.Name = "lblPaletteName";
-		this.lblPaletteName.LabelProp = global::Mono.Unix.Catalog.GetString ("Enter name for a new Palette:");
+		this.lblPaletteName.LabelProp = "Enter name for a new Palette:";
 		this.hbox2.Add (this.lblPaletteName);
 		global::Gtk.Box.BoxChild w11 = ((global::Gtk.Box.BoxChild)(this.hbox2 [this.lblPaletteName]));
 		w11.Position = 0;
@@ -243,7 +243,7 @@ public partial class MainWindow
 		this.btnAdd.CanFocus = true;
 		this.btnAdd.Name = "btnAdd";
 		this.btnAdd.UseUnderline = true;
-		this.btnAdd.Label = global::Mono.Unix.Catalog.GetString ("Add");
+		this.btnAdd.Label = "Add";
 		this.hbox2.Add (this.btnAdd);
 		global::Gtk.Box.BoxChild w13 = ((global::Gtk.Box.BoxChild)(this.hbox2 [this.btnAdd]));
 		w13.Position = 2;
@@ -254,7 +254,7 @@ public partial class MainWindow
 		this.btnUpdate.CanFocus = true;
 		this.btnUpdate.Name = "btnUpdate";
 		this.btnUpdate.UseUnderline = true;
-		this.btnUpdate.Label = global::Mono.Unix.Catalog.GetString ("Update");
+		this.btnUpdate.Label = "Update";
 		this.hbox2.Add (this.btnUpdate);
 		global::Gtk.Box.BoxChild w14 = ((global::Gtk.Box.BoxChild)(this.hbox2 [this.btnUpdate]));
 		w14.Position = 3;
@@ -265,7 +265,7 @@ public partial class MainWindow
 		this.btnCancle.CanFocus = true;
 		this.btnCancle.Name = "btnCancle";
 		this.btnCancle.UseUnderline = true;
-		this.btnCancle.Label = global::Mono.Unix.Catalog.GetString ("Cancel");
+		this.btnCancle.Label = "Cancel";
 		this.hbox2.Add (this.btnCancle);
 		global::Gtk.Box.BoxChild w15 = ((global::Gtk.Box.BoxChild)(this.hbox2 [this.btnCancle]));
 		w15.Position = 4;
@@ -502,7 +502,7 @@ public partial class MainWindow
 		// Container child table1.Gtk.Table+TableChild
 		this.label2 = new global::Gtk.Label ();
 		this.label2.Name = "label2";
-		this.label2.LabelProp = global::Mono.Unix.Catalog.GetString ("WebSnap");
+		this.label2.LabelProp = "WebSnap";
 		this.table1.Add (this.label2);
 		global::Gtk.Table.TableChild w35 = ((global::Gtk.Table.TableChild)(this.table1 [this.label2]));
 		w35.TopAttach = ((uint)(1));
@@ -514,7 +514,7 @@ public partial class MainWindow
 		// Container child table1.Gtk.Table+TableChild
 		this.label3 = new global::Gtk.Label ();
 		this.label3.Name = "label3";
-		this.label3.LabelProp = global::Mono.Unix.Catalog.GetString ("#");
+		this.label3.LabelProp = "#";
 		this.table1.Add (this.label3);
 		global::Gtk.Table.TableChild w36 = ((global::Gtk.Table.TableChild)(this.table1 [this.label3]));
 		w36.LeftAttach = ((uint)(8));
@@ -542,6 +542,7 @@ public partial class MainWindow
 		this.hbox2.Hide ();
 		this.Show ();
 		this.DeleteEvent += new global::Gtk.DeleteEventHandler (this.OnDeleteEvent);
+		this.quit.Activated += new global::System.EventHandler (this.OnQuitActionActivated);
 		this.quit1.Activated += new global::System.EventHandler (this.QuitClicked);
 		this.selectColor1.Activated += new global::System.EventHandler (this.AboutusClicked);
 		this.comboboxentry1.Changed += new global::System.EventHandler (this.Cmb_Changed);

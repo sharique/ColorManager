@@ -20,7 +20,7 @@ namespace ColorManager
 		
 		private global::Gtk.Label label1;
 		
-		private global::Gtk.ComboBox combobox1;
+		private global::Gtk.ComboBoxText combobox1;
 		
 		private global::Gtk.Button btnCreate;
 		
@@ -70,19 +70,19 @@ namespace ColorManager
 			// Widget ColorManager.MyForm
 			this.UIManager = new global::Gtk.UIManager ();
 			global::Gtk.ActionGroup w1 = new global::Gtk.ActionGroup ("Default");
-			this.FileAction = new global::Gtk.Action ("FileAction", global::Mono.Unix.Catalog.GetString ("_File"), null, null);
-			this.FileAction.ShortLabel = global::Mono.Unix.Catalog.GetString ("_File");
+			this.FileAction = new global::Gtk.Action ("FileAction", "_File", null, null);
+			this.FileAction.ShortLabel = "_File";
 			w1.Add (this.FileAction, null);
-			this.quitAction = new global::Gtk.Action ("quitAction", global::Mono.Unix.Catalog.GetString ("_Quit"), null, "gtk-quit");
-			this.quitAction.ShortLabel = global::Mono.Unix.Catalog.GetString ("_Quit");
+			this.quitAction = new global::Gtk.Action ("quitAction", "_Quit", null, "gtk-quit");
+			this.quitAction.ShortLabel = "_Quit";
 			w1.Add (this.quitAction, null);
-			this.HelpAction = new global::Gtk.Action ("HelpAction", global::Mono.Unix.Catalog.GetString ("_Help"), null, null);
-			this.HelpAction.ShortLabel = global::Mono.Unix.Catalog.GetString ("_Help");
+			this.HelpAction = new global::Gtk.Action ("HelpAction", "_Help", null, null);
+			this.HelpAction.ShortLabel = "_Help";
 			w1.Add (this.HelpAction, null);
 			this.UIManager.InsertActionGroup (w1, 0);
 			this.AddAccelGroup (this.UIManager.AccelGroup);
 			this.Name = "ColorManager.MyForm";
-			this.Title = global::Mono.Unix.Catalog.GetString ("Color Manager");
+			this.Title = "Color Manager";
 			this.WindowPosition = ((global::Gtk.WindowPosition)(4));
 			// Container child ColorManager.MyForm.Gtk.Container+ContainerChild
 			this.vbox1 = new global::Gtk.VBox ();
@@ -104,14 +104,14 @@ namespace ColorManager
 			// Container child hbox1.Gtk.Box+BoxChild
 			this.label1 = new global::Gtk.Label ();
 			this.label1.Name = "label1";
-			this.label1.LabelProp = global::Mono.Unix.Catalog.GetString ("Select Palette");
+			this.label1.LabelProp = "Select Palette";
 			this.hbox1.Add (this.label1);
 			global::Gtk.Box.BoxChild w3 = ((global::Gtk.Box.BoxChild)(this.hbox1 [this.label1]));
 			w3.Position = 0;
 			w3.Expand = false;
 			w3.Fill = false;
 			// Container child hbox1.Gtk.Box+BoxChild
-			this.combobox1 = global::Gtk.ComboBox.NewText ();
+			this.combobox1 = new global::Gtk.ComboBoxText ();
 			this.combobox1.Name = "combobox1";
 			this.hbox1.Add (this.combobox1);
 			global::Gtk.Box.BoxChild w4 = ((global::Gtk.Box.BoxChild)(this.hbox1 [this.combobox1]));
@@ -123,7 +123,7 @@ namespace ColorManager
 			this.btnCreate.CanFocus = true;
 			this.btnCreate.Name = "btnCreate";
 			this.btnCreate.UseUnderline = true;
-			this.btnCreate.Label = global::Mono.Unix.Catalog.GetString ("Create Palette");
+			this.btnCreate.Label = "Create Palette";
 			global::Gtk.Image w5 = new global::Gtk.Image ();
 			w5.Pixbuf = global::Stetic.IconLoader.LoadIcon (this, "gtk-add", global::Gtk.IconSize.Menu);
 			this.btnCreate.Image = w5;
@@ -137,7 +137,7 @@ namespace ColorManager
 			this.btnDelete.CanFocus = true;
 			this.btnDelete.Name = "btnDelete";
 			this.btnDelete.UseUnderline = true;
-			this.btnDelete.Label = global::Mono.Unix.Catalog.GetString ("Delete");
+			this.btnDelete.Label = "Delete";
 			global::Gtk.Image w7 = new global::Gtk.Image ();
 			w7.Pixbuf = global::Stetic.IconLoader.LoadIcon (this, "gtk-close", global::Gtk.IconSize.Menu);
 			this.btnDelete.Image = w7;
@@ -158,7 +158,7 @@ namespace ColorManager
 			// Container child hbox2.Gtk.Box+BoxChild
 			this.label2 = new global::Gtk.Label ();
 			this.label2.Name = "label2";
-			this.label2.LabelProp = global::Mono.Unix.Catalog.GetString ("Enter palette name");
+			this.label2.LabelProp = "Enter palette name";
 			this.hbox2.Add (this.label2);
 			global::Gtk.Box.BoxChild w10 = ((global::Gtk.Box.BoxChild)(this.hbox2 [this.label2]));
 			w10.Position = 0;
@@ -178,7 +178,7 @@ namespace ColorManager
 			this.butCr1.CanFocus = true;
 			this.butCr1.Name = "butCr1";
 			this.butCr1.UseUnderline = true;
-			this.butCr1.Label = global::Mono.Unix.Catalog.GetString ("Create");
+			this.butCr1.Label = "Create";
 			this.hbox2.Add (this.butCr1);
 			global::Gtk.Box.BoxChild w12 = ((global::Gtk.Box.BoxChild)(this.hbox2 [this.butCr1]));
 			w12.Position = 2;
@@ -313,7 +313,7 @@ namespace ColorManager
 			// Container child table1.Gtk.Table+TableChild
 			this.label3 = new global::Gtk.Label ();
 			this.label3.Name = "label3";
-			this.label3.LabelProp = global::Mono.Unix.Catalog.GetString ("Color Code");
+			this.label3.LabelProp = "Color Code";
 			this.table1.Add (this.label3);
 			global::Gtk.Table.TableChild w24 = ((global::Gtk.Table.TableChild)(this.table1 [this.label3]));
 			w24.LeftAttach = ((uint)(5));
@@ -346,7 +346,7 @@ namespace ColorManager
 			// Container child vbox1.Gtk.Box+BoxChild
 			this.lblDebug = new global::Gtk.Label ();
 			this.lblDebug.Name = "lblDebug";
-			this.lblDebug.LabelProp = global::Mono.Unix.Catalog.GetString ("Ready");
+			this.lblDebug.LabelProp = "Ready";
 			this.lblDebug.SingleLineMode = true;
 			this.vbox1.Add (this.lblDebug);
 			global::Gtk.Box.BoxChild w28 = ((global::Gtk.Box.BoxChild)(this.vbox1 [this.lblDebug]));
