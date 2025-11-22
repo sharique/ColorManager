@@ -542,6 +542,7 @@ public partial class MainWindow
 		this.hbox2.Hide ();
 		this.Show ();
 		this.DeleteEvent += new global::Gtk.DeleteEventHandler (this.OnDeleteEvent);
+		this.quit.Activated += new global::System.EventHandler (this.OnQuitActionActivated);
 		this.quit1.Activated += new global::System.EventHandler (this.QuitClicked);
 		this.selectColor1.Activated += new global::System.EventHandler (this.AboutusClicked);
 		this.comboboxentry1.Changed += new global::System.EventHandler (this.Cmb_Changed);
