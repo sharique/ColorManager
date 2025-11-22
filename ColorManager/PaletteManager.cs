@@ -16,16 +16,69 @@ namespace ColorManager
 		public PaletteManager ()
 		{
 			file = GetFilePath ();
+			EnsureColorsFileExists ();
 			doc = XDocument.Load (file);
 		}
 		
 		/// <summary>
-		/// Gets the full path to colors.xml next to the executable
+		/// Gets the full path to colors.xml in ApplicationData folder
 		/// </summary>
 		protected string GetFilePath ()
 		{
-			string exePath = Path.GetDirectoryName (Assembly.GetExecutingAssembly ().Location);
-			return Path.Combine (exePath, "colors.xml");
+			string appDataPath = Path.Combine(
+				Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData),
+				"ColorManager");
+			return Path.Combine (appDataPath, "colors.xml");
+		}
+
+		/// <summary>
+		/// Ensures colors.xml exists. If not, extracts from embedded resource.
+		/// Also migrates from old execution directory location if it exists there.
+		/// </summary>
+		protected void EnsureColorsFileExists()
+		{
+			if (File.Exists(file))
+				return;
+
+			// Try to migrate from old location (execution directory)
+			string oldLocation = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), "colors.xml");
+			if (File.Exists(oldLocation))
+			{
+				File.Copy(oldLocation, file);
+				return;
+			}
+
+			// Extract embedded resource
+			ExtractEmbeddedResource("colors.xml", file);
+		}
+
+		/// <summary>
+		/// Extracts an embedded resource to a file
+		/// </summary>
+		private void ExtractEmbeddedResource(string resourceName, string outputPath)
+		{
+			try
+			{
+				var assembly = Assembly.GetExecutingAssembly();
+				var fullResourceName = $"{assembly.GetName().Name}.{resourceName}";
+
+				using (var stream = assembly.GetManifestResourceStream(fullResourceName))
+				{
+					if (stream == null)
+						throw new FileNotFoundException($"Embedded resource '{fullResourceName}' not found.");
+
+					Directory.CreateDirectory(Path.GetDirectoryName(outputPath));
+					using (var fileStream = File.Create(outputPath))
+					{
+						stream.CopyTo(fileStream);
+					}
+				}
+			}
+			catch (Exception ex)
+			{
+				System.Diagnostics.Debug.WriteLine($"Error extracting embedded resource: {ex.Message}");
+				throw;
+			}
 		}
 		
 		protected void LoadXml ()

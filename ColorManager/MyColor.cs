@@ -10,27 +10,40 @@
 
 using System;
 using System.Xml.Linq;
+using CommunityToolkit.Mvvm.ComponentModel;
 
 namespace ColorManager
 {
-	public class MyColor
+	public partial class MyColor : ObservableObject
 	{
-		public string colorName { get; set; }
-        public string colorCode { get; set; }
-		
-        public MyColor()
-        {
-        }
+		[ObservableProperty]
+		private string colorName = string.Empty;
 
-        public XElement ToXml()
-        {
-            return new XElement("Color", new XAttribute("name", colorName), new XAttribute("code", colorCode));
-        }
+		[ObservableProperty]
+		private string hex = "FFFFFF";
 
-        public void FromXml(XElement xelem)
-        {
-            colorCode = xelem.Attribute("code").Value;
-            colorName = xelem.Attribute("name").Value;
-        }		
+		public MyColor()
+		{
+		}
+
+		public XElement ToXml()
+		{
+			return new XElement("Color", new XAttribute("hex", Hex));
+		}
+
+		public void FromXml(XElement xelem)
+		{
+			var hexAttr = xelem.Attribute("hex");
+			if (hexAttr != null)
+			{
+				Hex = hexAttr.Value;
+			}
+			
+			var nameAttr = xelem.Attribute("name");
+			if (nameAttr != null)
+			{
+				ColorName = nameAttr.Value;
+			}
+		}		
 	}
 }
