@@ -1,31 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <OutputType>Exe</OutputType>
     <TargetFramework>net8.0</TargetFramework>
-    <Nullable>disable</Nullable>
-    <ImplicitUsings>disable</ImplicitUsings>
+    <OutputType>Exe</OutputType>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
     <AssemblyName>ColorManager</AssemblyName>
     <RootNamespace>ColorManager</RootNamespace>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <!-- Support publishing for Windows and Linux runtimes -->
+    <RuntimeIdentifiers>win-x64;linux-x64</RuntimeIdentifiers>
+    <!-- Enable Avalonia compiled XAML -->
+    <AvaloniaUseCompiledXaml>true</AvaloniaUseCompiledXaml>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="GtkSharp" Version="3.24.24.117-develop" />
+    <PackageReference Include="Avalonia" Version="11.0.13" />
+    <PackageReference Include="Avalonia.Desktop" Version="11.0.13" />
+    <PackageReference Include="Avalonia.Themes.Fluent" Version="11.0.13" />
+    <PackageReference Include="Avalonia.Fonts.Inter" Version="11.0.13" />
+    <PackageReference Include="Avalonia.ReactiveUI" Version="11.0.13" />
+    <PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.2" />
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Include="gtk-gui\gui.stetic">
-      <LogicalName>gui.stetic</LogicalName>
+    <EmbeddedResource Include="colors.xml">
+      <LogicalName>colors.xml</LogicalName>
     </EmbeddedResource>
   </ItemGroup>
 
-  
-
+  <!-- Include XAML files as Avalonia resources for runtime/precompiled XAML -->
   <ItemGroup>
-    <None Include="colors.xml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
+    <AvaloniaResource Include="App.xaml" />
+    <AvaloniaResource Include="MainWindow.xaml" />
   </ItemGroup>
 
 </Project>

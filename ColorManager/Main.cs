@@ -1,17 +1,17 @@
-using System;
-using Gtk;
+using Avalonia;
 
-namespace ColorManager
+namespace ColorManager;
+
+public static class Program
 {
-	class MainClass
+	[STAThread]
+	public static void Main(string[] args)
 	{
-		public static void Main (string[] args)
-		{
-			Application.Init ();
-			//MainWindow win = new MainWindow ();
-			MyForm win = new MyForm ();
-			win.Show ();
-			Application.Run ();
-		}
+		BuildAvaloniaApp().StartWithClassicDesktopLifetime(args);
 	}
+
+	public static AppBuilder BuildAvaloniaApp() =>
+		AppBuilder.Configure<App>()
+			.UsePlatformDetect()
+			.LogToTrace();
 }
