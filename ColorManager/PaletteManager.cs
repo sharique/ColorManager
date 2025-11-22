@@ -2,6 +2,8 @@ using System;
 using System.Xml.Linq;
 using System.Linq;
 using System.Collections.Generic;
+using System.IO;
+using System.Reflection;
 
 
 namespace ColorManager
@@ -9,16 +11,26 @@ namespace ColorManager
 	public class PaletteManager
 	{
 		protected XDocument doc;
-		protected string file = "colors.xml";
+		protected string file;
 
 		public PaletteManager ()
 		{
-			doc = XDocument.Load ("colors.xml");
+			file = GetFilePath ();
+			doc = XDocument.Load (file);
+		}
+		
+		/// <summary>
+		/// Gets the full path to colors.xml next to the executable
+		/// </summary>
+		protected string GetFilePath ()
+		{
+			string exePath = Path.GetDirectoryName (Assembly.GetExecutingAssembly ().Location);
+			return Path.Combine (exePath, "colors.xml");
 		}
 		
 		protected void LoadXml ()
 		{
-			doc = XDocument.Load ("colors.xml");
+			doc = XDocument.Load (file);
 		}
 
 		public IEnumerable<XElement> GetPalette (string name)
@@ -52,11 +64,11 @@ namespace ColorManager
 			save();
 		}
 		/// <summary>
-		/// save the xml file 
+		/// save the xml file next to the executable
 		/// </summary>
 		public void save()
 		{
-			doc.Save("colors.xml");
+			doc.Save(file);
 		}
 	}
 }
