@@ -1544,6 +1544,11 @@ public partial class MainWindow : Gtk.Window
 		Application.Quit ();
 	}
 
+	protected virtual void OnQuitActionActivated (object sender, System.EventArgs e)
+	{
+		Application.Quit ();
+	}
+
 	protected virtual void AboutusClicked (object sender, System.EventArgs e)
 	{
 		MessageDialog md = new MessageDialog (this, DialogFlags.Modal, MessageType.Info, ButtonsType.Close, "Color Manager \n \nVersion : 0.1\n.");
