@@ -3,33 +3,7 @@
 
 public partial class MainWindow
 {
-	private global::Gtk.UIManager UIManager;
-	
-	private global::Gtk.Action Help;
-	
-	private global::Gtk.Action AboutUs;
-	
-	private global::Gtk.Action help;
-	
-	private global::Gtk.Action colorPicker;
-	
-	private global::Gtk.Action selectColor;
-	
-	private global::Gtk.Action quit;
-	
-	private global::Gtk.Action File;
-	
-	private global::Gtk.Action quit1;
-	
-	private global::Gtk.Action Help1;
-	
-	private global::Gtk.Action Help2;
-	
-	private global::Gtk.Action selectColor1;
-	
 	private global::Gtk.VBox vbox1;
-	
-	private global::Gtk.MenuBar menubar1;
 	
 	private global::Gtk.HBox hbox1;
 	
@@ -101,64 +75,17 @@ public partial class MainWindow
 	{
 		global::Stetic.Gui.Initialize (this);
 		// Widget MainWindow
-		this.UIManager = new global::Gtk.UIManager ();
-		global::Gtk.ActionGroup w1 = new global::Gtk.ActionGroup ("Default");
-		this.Help = new global::Gtk.Action ("Help", "Help", null, null);
-		this.Help.ShortLabel = "Help";
-		w1.Add (this.Help, null);
-		this.AboutUs = new global::Gtk.Action ("AboutUs", "About us", null, null);
-		this.AboutUs.ShortLabel = "About us";
-		w1.Add (this.AboutUs, null);
-		this.help = new global::Gtk.Action ("help", "About us", null, "gtk-help");
-		this.help.ShortLabel = "_Help";
-		w1.Add (this.help, null);
-		this.colorPicker = new global::Gtk.Action ("colorPicker", null, null, "gtk-color-picker");
-		w1.Add (this.colorPicker, null);
-		this.selectColor = new global::Gtk.Action ("selectColor", "_Color", null, "gtk-select-color");
-		this.selectColor.ShortLabel = "_Color";
-		w1.Add (this.selectColor, null);
-		this.quit = new global::Gtk.Action ("quit", "_Quit", null, "gtk-quit");
-		this.quit.ShortLabel = "_Quit";
-		w1.Add (this.quit, null);
-		this.File = new global::Gtk.Action ("File", "  File", null, null);
-		this.File.ShortLabel = "  File";
-		w1.Add (this.File, null);
-		this.quit1 = new global::Gtk.Action ("quit1", "_Quit", null, "gtk-quit");
-		this.quit1.ShortLabel = "_Quit";
-		w1.Add (this.quit1, null);
-		this.Help1 = new global::Gtk.Action ("Help1", "Help", null, null);
-		this.Help1.ShortLabel = "Help";
-		w1.Add (this.Help1, null);
-		this.Help2 = new global::Gtk.Action ("Help2", "Help", null, null);
-		this.Help2.ShortLabel = "Help";
-		w1.Add (this.Help2, null);
-		this.selectColor1 = new global::Gtk.Action ("selectColor1", "About Us", null, "gtk-dialog-info");
-		this.selectColor1.ShortLabel = "About Us";
-		w1.Add (this.selectColor1, null);
-		this.UIManager.InsertActionGroup (w1, 0);
-		this.AddAccelGroup (this.UIManager.AccelGroup);
 		this.Name = "MainWindow";
 		this.Title = "ColorPicker";
 		this.Icon = global::Stetic.IconLoader.LoadIcon (this, "gtk-select-color", global::Gtk.IconSize.Menu);
 		this.WindowPosition = ((global::Gtk.WindowPosition)(4));
 		this.DefaultWidth = 13;
 		// Container child MainWindow.Gtk.Container+ContainerChild
-		this.vbox1 = new global::Gtk.VBox ();
-		this.vbox1.Name = "vbox1";
-		this.vbox1.Spacing = 6;
+			this.vbox1 = new global::Gtk.VBox (false, 6);
+			this.vbox1.Name = "vbox1";
 		// Container child vbox1.Gtk.Box+BoxChild
-		this.UIManager.AddUiFromString ("<ui><menubar name='menubar1'><menu name='File' action='File'><menuitem name='quit1' action='quit1'/></menu><menu name='Help2' action='Help2'><menuitem name='selectColor1' action='selectColor1'/></menu></menubar></ui>");
-		this.menubar1 = ((global::Gtk.MenuBar)(this.UIManager.GetWidget ("/menubar1")));
-		this.menubar1.Name = "menubar1";
-		this.vbox1.Add (this.menubar1);
-		global::Gtk.Box.BoxChild w2 = ((global::Gtk.Box.BoxChild)(this.vbox1 [this.menubar1]));
-		w2.Position = 0;
-		w2.Expand = false;
-		w2.Fill = false;
-		// Container child vbox1.Gtk.Box+BoxChild
-		this.hbox1 = new global::Gtk.HBox ();
+		this.hbox1 = new global::Gtk.HBox (false, 6);
 		this.hbox1.Name = "hbox1";
-		this.hbox1.Spacing = 6;
 		// Container child hbox1.Gtk.Box+BoxChild
 		this.comboboxentry1 = new global::Gtk.ComboBoxText ();
 		this.comboboxentry1.Name = "comboboxentry1";
@@ -211,13 +138,12 @@ public partial class MainWindow
 		w9.Fill = false;
 		this.vbox1.Add (this.hbox1);
 		global::Gtk.Box.BoxChild w10 = ((global::Gtk.Box.BoxChild)(this.vbox1 [this.hbox1]));
-		w10.Position = 1;
+		w10.Position = 0;
 		w10.Expand = false;
 		w10.Fill = false;
 		// Container child vbox1.Gtk.Box+BoxChild
-		this.hbox2 = new global::Gtk.HBox ();
+		this.hbox2 = new global::Gtk.HBox (false, 6);
 		this.hbox2.Name = "hbox2";
-		this.hbox2.Spacing = 6;
 		// Container child hbox2.Gtk.Box+BoxChild
 		this.lblPaletteName = new global::Gtk.Label ();
 		this.lblPaletteName.Name = "lblPaletteName";
@@ -273,7 +199,7 @@ public partial class MainWindow
 		w15.Fill = false;
 		this.vbox1.Add (this.hbox2);
 		global::Gtk.Box.BoxChild w16 = ((global::Gtk.Box.BoxChild)(this.vbox1 [this.hbox2]));
-		w16.Position = 2;
+		w16.Position = 1;
 		w16.Expand = false;
 		w16.Fill = false;
 		// Container child vbox1.Gtk.Box+BoxChild
@@ -523,16 +449,16 @@ public partial class MainWindow
 		w36.YOptions = ((global::Gtk.AttachOptions)(4));
 		this.vbox1.Add (this.table1);
 		global::Gtk.Box.BoxChild w37 = ((global::Gtk.Box.BoxChild)(this.vbox1 [this.table1]));
-		w37.Position = 3;
+		w37.Position = 2;
 		w37.Expand = false;
 		w37.Fill = false;
 		// Container child vbox1.Gtk.Box+BoxChild
 		this.colorselection1 = new global::Gtk.ColorSelection ();
 		this.colorselection1.Name = "colorselection1";
-		this.colorselection1.HasOpacityControl = true;
+		this.colorselection1.HasOpacityControl = false;
 		this.vbox1.Add (this.colorselection1);
 		global::Gtk.Box.BoxChild w38 = ((global::Gtk.Box.BoxChild)(this.vbox1 [this.colorselection1]));
-		w38.Position = 4;
+		w38.Position = 3;
 		this.Add (this.vbox1);
 		if ((this.Child != null)) {
 			this.Child.ShowAll ();
@@ -542,9 +468,6 @@ public partial class MainWindow
 		this.hbox2.Hide ();
 		this.Show ();
 		this.DeleteEvent += new global::Gtk.DeleteEventHandler (this.OnDeleteEvent);
-		this.quit.Activated += new global::System.EventHandler (this.OnQuitActionActivated);
-		this.quit1.Activated += new global::System.EventHandler (this.QuitClicked);
-		this.selectColor1.Activated += new global::System.EventHandler (this.AboutusClicked);
 		this.comboboxentry1.Changed += new global::System.EventHandler (this.Cmb_Changed);
 		this.btnNew.Clicked += new global::System.EventHandler (this.OnBtnNewClicked);
 		this.button2.Clicked += new global::System.EventHandler (this.onBtnEditClicked);

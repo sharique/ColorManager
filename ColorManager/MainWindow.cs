@@ -1260,7 +1260,7 @@ public partial class MainWindow : Gtk.Window
 
 					string b1 = clr1.Substring (5, 2);
 					int ib1 = Int32.Parse (b1, NumberStyles.HexNumber);
-					colorbutton1.Color = new Gdk.Color ((byte)ir1, (byte)ig1, (byte)ib1);
+					colorbutton1.Rgba = new Gdk.RGBA { Red = ir1 / 255.0, Green = ig1 / 255.0, Blue = ib1 / 255.0, Alpha = 1 };
 
 					cnt--;
 				} else
@@ -1280,7 +1280,7 @@ public partial class MainWindow : Gtk.Window
 					string b2 = clr2.Substring (5, 2);
 					int ib2 = Int32.Parse (b2, NumberStyles.HexNumber);
 
-					colorbutton2.Color = new Gdk.Color ((byte)ir2, (byte)ig2, (byte)ib2);
+					colorbutton2.Rgba = new Gdk.RGBA { Red = ir2 / 255.0, Green = ig2 / 255.0, Blue = ib2 / 255.0, Alpha = 1 };
 					cnt--;
 				} else
 					return;
@@ -1299,7 +1299,7 @@ public partial class MainWindow : Gtk.Window
 					string b3 = clr3.Substring (5, 2);
 					int ib3 = Int32.Parse (b3, NumberStyles.HexNumber);
 
-					colorbutton3.Color = new Gdk.Color ((byte)ir3, (byte)ig3, (byte)ib3);
+					colorbutton3.Rgba = new Gdk.RGBA { Red = ir3 / 255.0, Green = ig3 / 255.0, Blue = ib3 / 255.0, Alpha = 1 };
 					cnt--;
 				} else
 					return;
@@ -1317,7 +1317,7 @@ public partial class MainWindow : Gtk.Window
 					string b4 = clr4.Substring (5, 2);
 					int ib4 = Int32.Parse (b4, NumberStyles.HexNumber);
 
-					colorbutton4.Color = new Gdk.Color ((byte)ir4, (byte)ig4, (byte)ib4);
+					colorbutton4.Rgba = new Gdk.RGBA { Red = ir4 / 255.0, Green = ig4 / 255.0, Blue = ib4 / 255.0, Alpha = 1 };
 					cnt--;
 				} else
 					return;
@@ -1336,7 +1336,7 @@ public partial class MainWindow : Gtk.Window
 					string b5 = clr5.Substring (5, 2);
 					int ib5 = Int32.Parse (b5, NumberStyles.HexNumber);
 
-					colorbutton5.Color = new Gdk.Color ((byte)ir5, (byte)ig5, (byte)ib5);
+					colorbutton5.Rgba = new Gdk.RGBA { Red = ir5 / 255.0, Green = ig5 / 255.0, Blue = ib5 / 255.0, Alpha = 1 };
 					cnt--;
 				} else
 					return;
@@ -1354,7 +1354,7 @@ public partial class MainWindow : Gtk.Window
 					string b6 = clr6.Substring (5, 2);
 					int ib6 = Int32.Parse (b6, NumberStyles.HexNumber);
 
-					colorbutton6.Color = new Gdk.Color ((byte)ir6, (byte)ig6, (byte)ib6);
+					colorbutton6.Rgba = new Gdk.RGBA { Red = ir6 / 255.0, Green = ig6 / 255.0, Blue = ib6 / 255.0, Alpha = 1 };
 					cnt--;
 				} else
 					return;
@@ -1372,7 +1372,7 @@ public partial class MainWindow : Gtk.Window
 
 					string b7 = clr7.Substring (5, 2);
 					int ib7 = Int32.Parse (b7, NumberStyles.HexNumber);
-					colorbutton7.Color = new Gdk.Color ((byte)ir7, (byte)ig7, (byte)ib7);
+					colorbutton7.Rgba = new Gdk.RGBA { Red = ir7 / 255.0, Green = ig7 / 255.0, Blue = ib7 / 255.0, Alpha = 1 };
 					cnt--;
 				} else
 					return;
@@ -1389,7 +1389,7 @@ public partial class MainWindow : Gtk.Window
 
 					string b8 = clr8.Substring (5, 2);
 					int ib8 = Int32.Parse (b8, NumberStyles.HexNumber);
-					colorbutton8.Color = new Gdk.Color ((byte)ir8, (byte)ig8, (byte)ib8);
+					colorbutton8.Rgba = new Gdk.RGBA { Red = ir8 / 255.0, Green = ig8 / 255.0, Blue = ib8 / 255.0, Alpha = 1 };
 					cnt--;
 				} else
 					return;
@@ -1406,7 +1406,7 @@ public partial class MainWindow : Gtk.Window
 
 					string b9 = clr9.Substring (5, 2);
 					int ib9 = Int32.Parse (b9, NumberStyles.HexNumber);
-					colorbutton9.Color = new Gdk.Color ((byte)ir9, (byte)ig9, (byte)ib9);
+					colorbutton9.Rgba = new Gdk.RGBA { Red = ir9 / 255.0, Green = ig9 / 255.0, Blue = ib9 / 255.0, Alpha = 1 };
 					cnt--;
 				} else
 					return;
@@ -1423,7 +1423,7 @@ public partial class MainWindow : Gtk.Window
 
 					string b10 = clr10.Substring (5, 2);
 					int ib10 = Int32.Parse (b10, NumberStyles.HexNumber);
-					colorbutton10.Color = new Gdk.Color ((byte)ir10, (byte)ig10, (byte)ib10);
+					colorbutton10.Rgba = new Gdk.RGBA { Red = ir10 / 255.0, Green = ig10 / 255.0, Blue = ib10 / 255.0, Alpha = 1 };
 					cnt--;
 				} else
 					return;
@@ -1440,7 +1440,7 @@ public partial class MainWindow : Gtk.Window
 
 					string b11 = clr11.Substring (5, 2);
 					int ib11 = Int32.Parse (b11, NumberStyles.HexNumber);
-					colorbutton11.Color = new Gdk.Color ((byte)ir11, (byte)ig11, (byte)ib11);
+					colorbutton11.Rgba = new Gdk.RGBA { Red = ir11 / 255.0, Green = ig11 / 255.0, Blue = ib11 / 255.0, Alpha = 1 };
 					cnt--;
 				} else
 					return;
@@ -1457,7 +1457,7 @@ public partial class MainWindow : Gtk.Window
 
 					string b12 = clr12.Substring (5, 2);
 					int ib12 = Int32.Parse (b12, NumberStyles.HexNumber);
-					colorbutton12.Color = new Gdk.Color ((byte)ir12, (byte)ig12, (byte)ib12);
+					colorbutton12.Rgba = new Gdk.RGBA { Red = ir12 / 255.0, Green = ig12 / 255.0, Blue = ib12 / 255.0, Alpha = 1 };
 					cnt--;
 				} else
 					return;
@@ -1474,7 +1474,7 @@ public partial class MainWindow : Gtk.Window
 
 					string b13 = clr13.Substring (5, 2);
 					int ib13 = Int32.Parse (b13, NumberStyles.HexNumber);
-					colorbutton13.Color = new Gdk.Color ((byte)ir13, (byte)ig13, (byte)ib13);
+					colorbutton13.Rgba = new Gdk.RGBA { Red = ir13 / 255.0, Green = ig13 / 255.0, Blue = ib13 / 255.0, Alpha = 1 };
 					cnt--;
 				} else
 					return;
@@ -1491,7 +1491,7 @@ public partial class MainWindow : Gtk.Window
 
 					string b14 = clr14.Substring (5, 2);
 					int ib14 = Int32.Parse (b14, NumberStyles.HexNumber);
-					colorbutton14.Color = new Gdk.Color ((byte)ir14, (byte)ig14, (byte)ib14);
+					colorbutton14.Rgba = new Gdk.RGBA { Red = ir14 / 255.0, Green = ig14 / 255.0, Blue = ib14 / 255.0, Alpha = 1 };
 					cnt--;
 				} else
 					return;
@@ -1508,7 +1508,7 @@ public partial class MainWindow : Gtk.Window
 
 					string b15 = clr15.Substring (5, 2);
 					int ib15 = Int32.Parse (b15, NumberStyles.HexNumber);
-					colorbutton15.Color = new Gdk.Color ((byte)ir15, (byte)ig15, (byte)ib15);
+					colorbutton15.Rgba = new Gdk.RGBA { Red = ir15 / 255.0, Green = ig15 / 255.0, Blue = ib15 / 255.0, Alpha = 1 };
 					cnt--;
 				} else
 					return;
@@ -1525,7 +1525,7 @@ public partial class MainWindow : Gtk.Window
 
 					string b16 = clr16.Substring (5, 2);
 					int ib16 = Int32.Parse (b16, NumberStyles.HexNumber);
-					colorbutton16.Color = new Gdk.Color ((byte)ir16, (byte)ig16, (byte)ib16);
+					colorbutton16.Rgba = new Gdk.RGBA { Red = ir16 / 255.0, Green = ig16 / 255.0, Blue = ib16 / 255.0, Alpha = 1 };
 					cnt--;
 				} else
 					return;
