@@ -122,8 +122,8 @@ public partial class MainWindow : Gtk.Window
 	protected virtual void OnColorbutton1ColorSet (object sender, System.EventArgs e)
 	{
 		//Red      
-		double a = colorbutton1.Color.Red;
-		int mod1 = Convert.ToInt32 (a / 257);
+		double a = colorbutton1.Rgba.Red * 255;
+		int mod1 = (int)a;
 
 		string red = mod1.ToString ();
 		string l1 = Convert.ToString (mod1, 16).ToUpper ();
@@ -135,8 +135,8 @@ public partial class MainWindow : Gtk.Window
 		else
 			hax1 = l1;
 		//Green		
-		double b = colorbutton1.Color.Green;
-		int mod2 = Convert.ToInt32 (b / 257);
+		double b = colorbutton1.Rgba.Green * 255;
+		int mod2 = (int)b;
 
 		string green = mod2.ToString ();
 		string l2 = Convert.ToString (mod2, 16).ToUpper ();
@@ -148,8 +148,8 @@ public partial class MainWindow : Gtk.Window
 		else
 			hax2 = l2;
 		//blue
-		double c = colorbutton1.Color.Blue;
-		int mod3 = Convert.ToInt32 (c / 257);
+		double c = colorbutton1.Rgba.Blue * 255;
+		int mod3 = (int)c;
 
 		string blue = mod3.ToString ();
 		string l3 = Convert.ToString (mod3, 16).ToUpper ();
@@ -193,8 +193,8 @@ public partial class MainWindow : Gtk.Window
 	protected virtual void OnColorbutton2ColorSet (object sender, System.EventArgs e)
 	{
 		//Red      
-		double a = colorbutton2.Color.Red;
-		int mod1 = Convert.ToInt32 (a / 257);
+		double a = colorbutton2.Rgba.Red * 255;
+		int mod1 = (int)a;
 
 		string red = mod1.ToString ();
 		string l1 = Convert.ToString (mod1, 16).ToUpper ();
@@ -206,8 +206,8 @@ public partial class MainWindow : Gtk.Window
 		else
 			hax1 = l1;
 		//Green		
-		double b = colorbutton2.Color.Green;
-		int mod2 = Convert.ToInt32 (b / 257);
+		double b = colorbutton2.Rgba.Green * 255;
+		int mod2 = (int)b;
 
 		string green = mod2.ToString ();
 
@@ -221,8 +221,8 @@ public partial class MainWindow : Gtk.Window
 			hax2 = l2;
 
 		//blue
-		double c = colorbutton2.Color.Blue;
-		int mod3 = Convert.ToInt32 (c / 257);
+		double c = colorbutton2.Rgba.Blue * 255;
+		int mod3 = (int)c;
 
 		string blue = mod3.ToString ();
 
@@ -260,8 +260,8 @@ public partial class MainWindow : Gtk.Window
 
 	protected virtual void OnColorbutton3ColorSet (object sender, System.EventArgs e)
 	{
-		double a = colorbutton3.Color.Red;
-		int mod1 = Convert.ToInt32 (a / 257);
+		double a = colorbutton3.Rgba.Red * 255;
+		int mod1 = (int)a;
 
 		string red = mod1.ToString ();
 		string l1 = Convert.ToString (mod1, 16).ToUpper ();
@@ -273,8 +273,8 @@ public partial class MainWindow : Gtk.Window
 		else
 			hax1 = l1;
 		//Green		
-		double b = colorbutton3.Color.Green;
-		int mod2 = Convert.ToInt32 (b / 257);
+		double b = colorbutton3.Rgba.Green * 255;
+		int mod2 = (int)b;
 
 		string green = mod2.ToString ();
 
@@ -288,8 +288,8 @@ public partial class MainWindow : Gtk.Window
 			hax2 = l2;
 
 		//blue
-		double c = colorbutton3.Color.Blue;
-		int mod3 = Convert.ToInt32 (c / 257);
+		double c = colorbutton3.Rgba.Blue * 255;
+		int mod3 = (int)c;
 
 		string blue = mod3.ToString ();
 
@@ -332,8 +332,8 @@ public partial class MainWindow : Gtk.Window
 	protected virtual void OnColorbutton4ColorSet (object sender, System.EventArgs e)
 	{
 		//Red      
-		double a = colorbutton4.Color.Red;
-		int mod1 = Convert.ToInt32 (a / 257);
+		double a = colorbutton4.Rgba.Red * 255;
+		int mod1 = (int)a;
 
 		string red = mod1.ToString ();
 		string l1 = Convert.ToString (mod1, 16).ToUpper ();
@@ -345,8 +345,8 @@ public partial class MainWindow : Gtk.Window
 		else
 			hax1 = l1;
 		//Green		
-		double b = colorbutton4.Color.Green;
-		int mod2 = Convert.ToInt32 (b / 257);
+		double b = colorbutton4.Rgba.Green * 255;
+		int mod2 = (int)b;
 
 		string green = mod2.ToString ();
 		string l2 = Convert.ToString (mod2, 16).ToUpper ();
@@ -359,8 +359,8 @@ public partial class MainWindow : Gtk.Window
 			hax2 = l2;
 
 		//blue
-		double c = colorbutton4.Color.Blue;
-		int mod3 = Convert.ToInt32 (c / 257);
+		double c = colorbutton4.Rgba.Blue * 255;
+		int mod3 = (int)c;
 
 		string blue = mod3.ToString ();
 		string l3 = Convert.ToString (mod3, 16).ToUpper ();
@@ -401,8 +401,8 @@ public partial class MainWindow : Gtk.Window
 	protected virtual void OnColorbutton5ColorSet (object sender, System.EventArgs e)
 	{
 		//Red      
-		double a = colorbutton5.Color.Red;
-		int mod1 = Convert.ToInt32 (a / 257);
+		double a = colorbutton5.Rgba.Red * 255;
+		int mod1 = (int)a;
 
 		string red = mod1.ToString ();
 		string l1 = Convert.ToString (mod1, 16).ToUpper ();
@@ -414,8 +414,8 @@ public partial class MainWindow : Gtk.Window
 		else
 			hax1 = l1;
 		//Green		
-		double b = colorbutton5.Color.Green;
-		int mod2 = Convert.ToInt32 (b / 257);
+		double b = colorbutton5.Rgba.Green * 255;
+		int mod2 = (int)b;
 
 		string green = mod2.ToString ();
 		string l2 = Convert.ToString (mod2, 16).ToUpper ();
@@ -427,8 +427,8 @@ public partial class MainWindow : Gtk.Window
 		else
 			hax2 = l2;
 		//blue
-		double c = colorbutton5.Color.Blue;
-		int mod3 = Convert.ToInt32 (c / 257);
+		double c = colorbutton5.Rgba.Blue * 255;
+		int mod3 = (int)c;
 
 		string blue = mod3.ToString ();
 		string l3 = Convert.ToString (mod3, 16).ToUpper ();
@@ -464,8 +464,8 @@ public partial class MainWindow : Gtk.Window
 	protected virtual void OnColorbutton6ColorSet (object sender, System.EventArgs e)
 	{
 		//Red      
-		double a = colorbutton6.Color.Red;
-		int mod1 = Convert.ToInt32 (a / 257);
+		double a = colorbutton6.Rgba.Red * 255;
+		int mod1 = (int)a;
 
 		string red = mod1.ToString ();
 		string l1 = Convert.ToString (mod1, 16).ToUpper ();
@@ -477,8 +477,8 @@ public partial class MainWindow : Gtk.Window
 		else
 			hax1 = l1;
 		//Green		
-		double b = colorbutton6.Color.Green;
-		int mod2 = Convert.ToInt32 (b / 257);
+		double b = colorbutton6.Rgba.Green * 255;
+		int mod2 = (int)b;
 
 		string green = mod2.ToString ();
 
@@ -492,8 +492,8 @@ public partial class MainWindow : Gtk.Window
 			hax2 = l2;
 
 		//blue
-		double c = colorbutton6.Color.Blue;
-		int mod3 = Convert.ToInt32 (c / 257);
+		double c = colorbutton6.Rgba.Blue * 255;
+		int mod3 = (int)c;
 
 		string blue = mod3.ToString ();
 
@@ -535,8 +535,8 @@ public partial class MainWindow : Gtk.Window
 	protected virtual void OnColorbutton7ColorSet (object sender, System.EventArgs e)
 	{
 		//Red      
-		double a = colorbutton7.Color.Red;
-		int mod1 = Convert.ToInt32 (a / 257);
+		double a = colorbutton7.Rgba.Red * 255;
+		int mod1 = (int)a;
 
 		string red = mod1.ToString ();
 		string l1 = Convert.ToString (mod1, 16).ToUpper ();
@@ -547,8 +547,8 @@ public partial class MainWindow : Gtk.Window
 		else
 			hax1 = l1;
 		//Green		
-		double b = colorbutton7.Color.Green;
-		int mod2 = Convert.ToInt32 (b / 257);
+		double b = colorbutton7.Rgba.Green * 255;
+		int mod2 = (int)b;
 
 		string green = mod2.ToString ();
 		string l2 = Convert.ToString (mod2, 16).ToUpper ();
@@ -559,8 +559,8 @@ public partial class MainWindow : Gtk.Window
 		else
 			hax2 = l2;
 		//blue
-		double c = colorbutton7.Color.Blue;
-		int mod3 = Convert.ToInt32 (c / 257);
+		double c = colorbutton7.Rgba.Blue * 255;
+		int mod3 = (int)c;
 
 		string blue = mod3.ToString ();
 		string l3 = Convert.ToString (mod3, 16).ToUpper ();
@@ -600,8 +600,8 @@ public partial class MainWindow : Gtk.Window
 	protected virtual void OnColorbutton8ColorSet (object sender, System.EventArgs e)
 	{
 		//Red      
-		double a = colorbutton8.Color.Red;
-		int mod1 = Convert.ToInt32 (a / 257);
+		double a = colorbutton8.Rgba.Red * 255;
+		int mod1 = (int)a;
 
 		string red = mod1.ToString ();
 		string l1 = Convert.ToString (mod1, 16).ToUpper ();
@@ -612,8 +612,8 @@ public partial class MainWindow : Gtk.Window
 		else
 			hax1 = l1;
 		//Green		
-		double b = colorbutton8.Color.Green;
-		int mod2 = Convert.ToInt32 (b / 257);
+		double b = colorbutton8.Rgba.Green * 255;
+		int mod2 = (int)b;
 
 		string green = mod2.ToString ();
 		string l2 = Convert.ToString (mod2, 16).ToUpper ();
@@ -625,9 +625,9 @@ public partial class MainWindow : Gtk.Window
 		else
 			hax2 = l2;
 		//blue
-		//string bl	= colorbutton1.Color.Blue.ToString();
-		double c = colorbutton8.Color.Blue;
-		int mod3 = Convert.ToInt32 (c / 257);
+		//string bl	= colorbutton1.Rgba.Blue * 255.ToString();
+		double c = colorbutton8.Rgba.Blue * 255;
+		int mod3 = (int)c;
 
 		string blue = mod3.ToString ();
 		string l3 = Convert.ToString (mod3, 16).ToUpper ();
@@ -668,8 +668,8 @@ public partial class MainWindow : Gtk.Window
 	protected virtual void OnColorbutton9ColorSet (object sender, System.EventArgs e)
 	{
 		//Red      
-		double a = colorbutton9.Color.Red;
-		int mod1 = Convert.ToInt32 (a / 257);
+		double a = colorbutton9.Rgba.Red * 255;
+		int mod1 = (int)a;
 
 		string red = mod1.ToString ();
 		string l1 = Convert.ToString (mod1, 16).ToUpper ();
@@ -681,8 +681,8 @@ public partial class MainWindow : Gtk.Window
 		else
 			hax1 = l1;
 		//Green		
-		double b = colorbutton9.Color.Green;
-		int mod2 = Convert.ToInt32 (b / 257);
+		double b = colorbutton9.Rgba.Green * 255;
+		int mod2 = (int)b;
 
 		string green = mod2.ToString ();
 		string l2 = Convert.ToString (mod2, 16).ToUpper ();
@@ -695,8 +695,8 @@ public partial class MainWindow : Gtk.Window
 			hax2 = l2;
 
 		//blue
-		double c = colorbutton9.Color.Blue;
-		int mod3 = Convert.ToInt32 (c / 257);
+		double c = colorbutton9.Rgba.Blue * 255;
+		int mod3 = (int)c;
 
 		string blue = mod3.ToString ();
 		string l3 = Convert.ToString (mod3, 16).ToUpper ();
@@ -736,8 +736,8 @@ public partial class MainWindow : Gtk.Window
 	protected virtual void OnColorbutton10ColorSet (object sender, System.EventArgs e)
 	{
 		//Red      
-		double a = colorbutton10.Color.Red;
-		int mod1 = Convert.ToInt32 (a / 257);
+		double a = colorbutton10.Rgba.Red * 255;
+		int mod1 = (int)a;
 
 		string red = mod1.ToString ();
 		string l1 = Convert.ToString (mod1, 16).ToUpper ();
@@ -749,8 +749,8 @@ public partial class MainWindow : Gtk.Window
 		else
 			hax1 = l1;
 		//Green		
-		double b = colorbutton10.Color.Green;
-		int mod2 = Convert.ToInt32 (b / 257);
+		double b = colorbutton10.Rgba.Green * 255;
+		int mod2 = (int)b;
 
 		string green = mod2.ToString ();
 		string l2 = Convert.ToString (mod2, 16).ToUpper ();
@@ -762,8 +762,8 @@ public partial class MainWindow : Gtk.Window
 		else
 			hax2 = l2;
 		//blue
-		double c = colorbutton10.Color.Blue;
-		int mod3 = Convert.ToInt32 (c / 257);
+		double c = colorbutton10.Rgba.Blue * 255;
+		int mod3 = (int)c;
 
 		string blue = mod3.ToString ();
 		string l3 = Convert.ToString (mod3, 16).ToUpper ();
@@ -804,8 +804,8 @@ public partial class MainWindow : Gtk.Window
 	{
 		//entry3.Text = "Button2";
 		//Red      
-		double a = colorbutton11.Color.Red;
-		int mod1 = Convert.ToInt32 (a / 257);
+		double a = colorbutton11.Rgba.Red * 255;
+		int mod1 = (int)a;
 
 		string red = mod1.ToString ();
 		string l1 = Convert.ToString (mod1, 16).ToUpper ();
@@ -817,8 +817,8 @@ public partial class MainWindow : Gtk.Window
 		else
 			hax1 = l1;
 		//Green		
-		double b = colorbutton11.Color.Green;
-		int mod2 = Convert.ToInt32 (b / 257);
+		double b = colorbutton11.Rgba.Green * 255;
+		int mod2 = (int)b;
 
 		string green = mod2.ToString ();
 		string l2 = Convert.ToString (mod2, 16).ToUpper ();
@@ -831,8 +831,8 @@ public partial class MainWindow : Gtk.Window
 			hax2 = l2;
 
 		//blue
-		double c = colorbutton11.Color.Blue;
-		int mod3 = Convert.ToInt32 (c / 257);
+		double c = colorbutton11.Rgba.Blue * 255;
+		int mod3 = (int)c;
 
 		string blue = mod3.ToString ();
 		string l3 = Convert.ToString (mod3, 16).ToUpper ();
@@ -872,8 +872,8 @@ public partial class MainWindow : Gtk.Window
 	{
 
 		//Red      
-		double a = colorbutton12.Color.Red;
-		int mod1 = Convert.ToInt32 (a / 257);
+		double a = colorbutton12.Rgba.Red * 255;
+		int mod1 = (int)a;
 
 		string red = mod1.ToString ();
 		string l1 = Convert.ToString (mod1, 16).ToUpper ();
@@ -885,8 +885,8 @@ public partial class MainWindow : Gtk.Window
 		else
 			hax1 = l1;
 		//Green		
-		double b = colorbutton12.Color.Green;
-		int mod2 = Convert.ToInt32 (b / 257);
+		double b = colorbutton12.Rgba.Green * 255;
+		int mod2 = (int)b;
 
 		string green = mod2.ToString ();
 		string l2 = Convert.ToString (mod2, 16).ToUpper ();
@@ -898,8 +898,8 @@ public partial class MainWindow : Gtk.Window
 		else
 			hax2 = l2;
 		//blue
-		double c = colorbutton12.Color.Blue;
-		int mod3 = Convert.ToInt32 (c / 257);
+		double c = colorbutton12.Rgba.Blue * 255;
+		int mod3 = (int)c;
 
 		string blue = mod3.ToString ();
 		string l3 = Convert.ToString (mod3, 16).ToUpper ();
@@ -940,8 +940,8 @@ public partial class MainWindow : Gtk.Window
 	{
 
 		//Red      
-		double a = colorbutton13.Color.Red;
-		int mod1 = Convert.ToInt32 (a / 257);
+		double a = colorbutton13.Rgba.Red * 255;
+		int mod1 = (int)a;
 
 		string red = mod1.ToString ();
 		string l1 = Convert.ToString (mod1, 16).ToUpper ();
@@ -953,8 +953,8 @@ public partial class MainWindow : Gtk.Window
 		else
 			hax1 = l1;
 		//Green		
-		double b = colorbutton13.Color.Green;
-		int mod2 = Convert.ToInt32 (b / 257);
+		double b = colorbutton13.Rgba.Green * 255;
+		int mod2 = (int)b;
 
 		string green = mod2.ToString ();
 		string l2 = Convert.ToString (mod2, 16).ToUpper ();
@@ -966,8 +966,8 @@ public partial class MainWindow : Gtk.Window
 		else
 			hax2 = l2;
 		//blue
-		double c = colorbutton13.Color.Blue;
-		int mod3 = Convert.ToInt32 (c / 257);
+		double c = colorbutton13.Rgba.Blue * 255;
+		int mod3 = (int)c;
 
 		string blue = mod3.ToString ();
 		string l3 = Convert.ToString (mod3, 16).ToUpper ();
@@ -1008,8 +1008,8 @@ public partial class MainWindow : Gtk.Window
 	{
 		// entry3.Text = "Button2";
 		//Red      
-		double a = colorbutton14.Color.Red;
-		int mod1 = Convert.ToInt32 (a / 257);
+		double a = colorbutton14.Rgba.Red * 255;
+		int mod1 = (int)a;
 
 		string red = mod1.ToString ();
 		string l1 = Convert.ToString (mod1, 16).ToUpper ();
@@ -1021,8 +1021,8 @@ public partial class MainWindow : Gtk.Window
 		else
 			hax1 = l1;
 		//Green		
-		double b = colorbutton14.Color.Green;
-		int mod2 = Convert.ToInt32 (b / 257);
+		double b = colorbutton14.Rgba.Green * 255;
+		int mod2 = (int)b;
 
 		string green = mod2.ToString ();
 		string l2 = Convert.ToString (mod2, 16).ToUpper ();
@@ -1035,8 +1035,8 @@ public partial class MainWindow : Gtk.Window
 			hax2 = l2;
 
 		//blue
-		double c = colorbutton14.Color.Blue;
-		int mod3 = Convert.ToInt32 (c / 257);
+		double c = colorbutton14.Rgba.Blue * 255;
+		int mod3 = (int)c;
 
 		string blue = mod3.ToString ();
 
@@ -1079,8 +1079,8 @@ public partial class MainWindow : Gtk.Window
 	{
 		// entry3.Text = "Button2";
 		//Red      
-		double a = colorbutton15.Color.Red;
-		int mod1 = Convert.ToInt32 (a / 257);
+		double a = colorbutton15.Rgba.Red * 255;
+		int mod1 = (int)a;
 
 		string red = mod1.ToString ();
 		string l1 = Convert.ToString (mod1, 16).ToUpper ();
@@ -1092,8 +1092,8 @@ public partial class MainWindow : Gtk.Window
 		else
 			hax1 = l1;
 		//Green		
-		double b = colorbutton15.Color.Green;
-		int mod2 = Convert.ToInt32 (b / 257);
+		double b = colorbutton15.Rgba.Green * 255;
+		int mod2 = (int)b;
 
 		string green = mod2.ToString ();
 		string l2 = Convert.ToString (mod2, 16).ToUpper ();
@@ -1106,8 +1106,8 @@ public partial class MainWindow : Gtk.Window
 			hax2 = l2;
 
 		//blue
-		double c = colorbutton15.Color.Blue;
-		int mod3 = Convert.ToInt32 (c / 257);
+		double c = colorbutton15.Rgba.Blue * 255;
+		int mod3 = (int)c;
 
 		string blue = mod3.ToString ();
 		string l3 = Convert.ToString (mod3, 16).ToUpper ();
@@ -1148,8 +1148,8 @@ public partial class MainWindow : Gtk.Window
 	{
 		//  entry3.Text = "Button2";
 		//Red      
-		double a = colorbutton16.Color.Red;
-		int mod1 = Convert.ToInt32 (a / 257);
+		double a = colorbutton16.Rgba.Red * 255;
+		int mod1 = (int)a;
 
 		string red = mod1.ToString ();
 		string l1 = Convert.ToString (mod1, 16).ToUpper ();
@@ -1161,8 +1161,8 @@ public partial class MainWindow : Gtk.Window
 		else
 			hax1 = l1;
 		//Green		
-		double b = colorbutton16.Color.Green;
-		int mod2 = Convert.ToInt32 (b / 257);
+		double b = colorbutton16.Rgba.Green * 255;
+		int mod2 = (int)b;
 
 		string green = mod2.ToString ();
 		string l2 = Convert.ToString (mod2, 16).ToUpper ();
@@ -1174,8 +1174,8 @@ public partial class MainWindow : Gtk.Window
 		else
 			hax2 = l2;
 		//blue
-		double c = colorbutton16.Color.Blue;
-		int mod3 = Convert.ToInt32 (c / 257);
+		double c = colorbutton16.Rgba.Blue * 255;
+		int mod3 = (int)c;
 
 		string blue = mod3.ToString ();
 		string l3 = Convert.ToString (mod3, 16).ToUpper ();
@@ -1222,22 +1222,22 @@ public partial class MainWindow : Gtk.Window
 	}
 	protected virtual void Cmb_Changed (object sender, System.EventArgs e)
 	{
-		colorbutton1.Color = new Gdk.Color (255, 255, 255);
-		colorbutton2.Color = new Gdk.Color (255, 255, 255);
-		colorbutton3.Color = new Gdk.Color (255, 255, 255);
-		colorbutton4.Color = new Gdk.Color (255, 255, 255);
-		colorbutton5.Color = new Gdk.Color (255, 255, 255);
-		colorbutton6.Color = new Gdk.Color (255, 255, 255);
-		colorbutton7.Color = new Gdk.Color (255, 255, 255);
-		colorbutton8.Color = new Gdk.Color (255, 255, 255);
-		colorbutton9.Color = new Gdk.Color (255, 255, 255);
-		colorbutton10.Color = new Gdk.Color (255, 255, 255);
-		colorbutton11.Color = new Gdk.Color (255, 255, 255);
-		colorbutton12.Color = new Gdk.Color (255, 255, 255);
-		colorbutton13.Color = new Gdk.Color (255, 255, 255);
-		colorbutton14.Color = new Gdk.Color (255, 255, 255);
-		colorbutton15.Color = new Gdk.Color (255, 255, 255);
-		colorbutton16.Color = new Gdk.Color (255, 255, 255);
+		colorbutton1.Rgba = new Gdk.RGBA { Red = 1, Green = 1, Blue = 1, Alpha = 1 };
+		colorbutton2.Rgba = new Gdk.RGBA { Red = 1, Green = 1, Blue = 1, Alpha = 1 };
+		colorbutton3.Rgba = new Gdk.RGBA { Red = 1, Green = 1, Blue = 1, Alpha = 1 };
+		colorbutton4.Rgba = new Gdk.RGBA { Red = 1, Green = 1, Blue = 1, Alpha = 1 };
+		colorbutton5.Rgba = new Gdk.RGBA { Red = 1, Green = 1, Blue = 1, Alpha = 1 };
+		colorbutton6.Rgba = new Gdk.RGBA { Red = 1, Green = 1, Blue = 1, Alpha = 1 };
+		colorbutton7.Rgba = new Gdk.RGBA { Red = 1, Green = 1, Blue = 1, Alpha = 1 };
+		colorbutton8.Rgba = new Gdk.RGBA { Red = 1, Green = 1, Blue = 1, Alpha = 1 };
+		colorbutton9.Rgba = new Gdk.RGBA { Red = 1, Green = 1, Blue = 1, Alpha = 1 };
+		colorbutton10.Rgba = new Gdk.RGBA { Red = 1, Green = 1, Blue = 1, Alpha = 1 };
+		colorbutton11.Rgba = new Gdk.RGBA { Red = 1, Green = 1, Blue = 1, Alpha = 1 };
+		colorbutton12.Rgba = new Gdk.RGBA { Red = 1, Green = 1, Blue = 1, Alpha = 1 };
+		colorbutton13.Rgba = new Gdk.RGBA { Red = 1, Green = 1, Blue = 1, Alpha = 1 };
+		colorbutton14.Rgba = new Gdk.RGBA { Red = 1, Green = 1, Blue = 1, Alpha = 1 };
+		colorbutton15.Rgba = new Gdk.RGBA { Red = 1, Green = 1, Blue = 1, Alpha = 1 };
+		colorbutton16.Rgba = new Gdk.RGBA { Red = 1, Green = 1, Blue = 1, Alpha = 1 };
 
 
 		XmlDocument xdoc = new XmlDocument ();

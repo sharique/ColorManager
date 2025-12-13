@@ -45,40 +45,60 @@ namespace ColorManager
 			tbClr.Text="";
 			int cnt = elem.Count ();
 			
-			if (cnt >= 1)
-				clrBtn1.Color = GetColor(elem.ElementAt (0).Attribute ("COLOR").Value.ToString ());
-			if (cnt >= 2)
-				clrBtn2.Color = GetColor (elem.ElementAt (1).Attribute ("COLOR").Value.ToString ());
-			if (cnt >= 3)
-				clrBtn3.Color = GetColor (elem.ElementAt (2).Attribute ("COLOR").Value.ToString ());
-			if (cnt >= 4)
-				clrBtn4.Color = GetColor (elem.ElementAt (3).Attribute ("COLOR").Value.ToString ());
-			if (cnt >= 5)
-				clrBtn5.Color = GetColor (elem.ElementAt (4).Attribute ("COLOR").Value.ToString ());
-			if (cnt >= 6)
-				clrBtn6.Color = GetColor (elem.ElementAt (5).Attribute ("COLOR").Value.ToString ());
-			if (cnt >= 7)
-				clrBtn7.Color = GetColor (elem.ElementAt (6).Attribute ("COLOR").Value.ToString ());
-			if (cnt >= 8)
-				clrBtn8.Color = GetColor (elem.ElementAt (7).Attribute ("COLOR").Value.ToString ());
-			if (cnt >= 9)
-				clrBtn9.Color = GetColor (elem.ElementAt (8).Attribute ("COLOR").Value.ToString ());
-			if (cnt >= 10)
-				clrBtn10.Color = GetColor (elem.ElementAt (9).Attribute ("COLOR").Value.ToString ());
+			if (cnt >= 1) {
+				Gdk.Color c = GetColor(elem.ElementAt (0).Attribute ("COLOR").Value.ToString ());
+				clrBtn1.Rgba = new Gdk.RGBA { Red = c.Red / 65535.0, Green = c.Green / 65535.0, Blue = c.Blue / 65535.0, Alpha = 1 };
+			}
+			if (cnt >= 2) {
+				Gdk.Color c = GetColor (elem.ElementAt (1).Attribute ("COLOR").Value.ToString ());
+				clrBtn2.Rgba = new Gdk.RGBA { Red = c.Red / 65535.0, Green = c.Green / 65535.0, Blue = c.Blue / 65535.0, Alpha = 1 };
+			}
+			if (cnt >= 3) {
+				Gdk.Color c = GetColor (elem.ElementAt (2).Attribute ("COLOR").Value.ToString ());
+				clrBtn3.Rgba = new Gdk.RGBA { Red = c.Red / 65535.0, Green = c.Green / 65535.0, Blue = c.Blue / 65535.0, Alpha = 1 };
+			}
+			if (cnt >= 4) {
+				Gdk.Color c = GetColor (elem.ElementAt (3).Attribute ("COLOR").Value.ToString ());
+				clrBtn4.Rgba = new Gdk.RGBA { Red = c.Red / 65535.0, Green = c.Green / 65535.0, Blue = c.Blue / 65535.0, Alpha = 1 };
+			}
+			if (cnt >= 5) {
+				Gdk.Color c = GetColor (elem.ElementAt (4).Attribute ("COLOR").Value.ToString ());
+				clrBtn5.Rgba = new Gdk.RGBA { Red = c.Red / 65535.0, Green = c.Green / 65535.0, Blue = c.Blue / 65535.0, Alpha = 1 };
+			}
+			if (cnt >= 6) {
+				Gdk.Color c = GetColor (elem.ElementAt (5).Attribute ("COLOR").Value.ToString ());
+				clrBtn6.Rgba = new Gdk.RGBA { Red = c.Red / 65535.0, Green = c.Green / 65535.0, Blue = c.Blue / 65535.0, Alpha = 1 };
+			}
+			if (cnt >= 7) {
+				Gdk.Color c = GetColor (elem.ElementAt (6).Attribute ("COLOR").Value.ToString ());
+				clrBtn7.Rgba = new Gdk.RGBA { Red = c.Red / 65535.0, Green = c.Green / 65535.0, Blue = c.Blue / 65535.0, Alpha = 1 };
+			}
+			if (cnt >= 8) {
+				Gdk.Color c = GetColor (elem.ElementAt (7).Attribute ("COLOR").Value.ToString ());
+				clrBtn8.Rgba = new Gdk.RGBA { Red = c.Red / 65535.0, Green = c.Green / 65535.0, Blue = c.Blue / 65535.0, Alpha = 1 };
+			}
+			if (cnt >= 9) {
+				Gdk.Color c = GetColor (elem.ElementAt (8).Attribute ("COLOR").Value.ToString ());
+				clrBtn9.Rgba = new Gdk.RGBA { Red = c.Red / 65535.0, Green = c.Green / 65535.0, Blue = c.Blue / 65535.0, Alpha = 1 };
+			}
+			if (cnt >= 10) {
+				Gdk.Color c = GetColor (elem.ElementAt (9).Attribute ("COLOR").Value.ToString ());
+				clrBtn10.Rgba = new Gdk.RGBA { Red = c.Red / 65535.0, Green = c.Green / 65535.0, Blue = c.Blue / 65535.0, Alpha = 1 };
+			}
 		}
 
 		protected void ClearClrBtns ()
 		{
-			clrBtn1.Color = new Gdk.Color (255, 255, 255);
-			clrBtn2.Color = new Gdk.Color (255, 255, 255);
-			clrBtn3.Color = new Gdk.Color (255, 255, 255);
-			clrBtn4.Color = new Gdk.Color (255, 255, 255);
-			clrBtn5.Color = new Gdk.Color (255, 255, 255);
-			clrBtn6.Color = new Gdk.Color (255, 255, 255);
-			clrBtn7.Color = new Gdk.Color (255, 255, 255);
-			clrBtn8.Color = new Gdk.Color (255, 255, 255);
-			clrBtn9.Color = new Gdk.Color (255, 255, 255);
-			clrBtn10.Color = new Gdk.Color (255, 255, 255);
+			clrBtn1.Rgba = new Gdk.RGBA { Red = 1, Green = 1, Blue = 1, Alpha = 1 };
+			clrBtn2.Rgba = new Gdk.RGBA { Red = 1, Green = 1, Blue = 1, Alpha = 1 };
+			clrBtn3.Rgba = new Gdk.RGBA { Red = 1, Green = 1, Blue = 1, Alpha = 1 };
+			clrBtn4.Rgba = new Gdk.RGBA { Red = 1, Green = 1, Blue = 1, Alpha = 1 };
+			clrBtn5.Rgba = new Gdk.RGBA { Red = 1, Green = 1, Blue = 1, Alpha = 1 };
+			clrBtn6.Rgba = new Gdk.RGBA { Red = 1, Green = 1, Blue = 1, Alpha = 1 };
+			clrBtn7.Rgba = new Gdk.RGBA { Red = 1, Green = 1, Blue = 1, Alpha = 1 };
+			clrBtn8.Rgba = new Gdk.RGBA { Red = 1, Green = 1, Blue = 1, Alpha = 1 };
+			clrBtn9.Rgba = new Gdk.RGBA { Red = 1, Green = 1, Blue = 1, Alpha = 1 };
+			clrBtn10.Rgba = new Gdk.RGBA { Red = 1, Green = 1, Blue = 1, Alpha = 1 };
 		}
 
 		protected Gdk.Color GetColor (string clr1)
@@ -101,8 +121,8 @@ namespace ColorManager
 		protected string GetColorCode (Gtk.ColorButton clrbtn)
 		{
 			//Red      
-			double a = clrbtn.Color.Red;
-			int mod1 = Convert.ToInt32 (a / 257);
+			double a = clrbtn.Rgba.Red * 255;
+			int mod1 = (int)a;
 			
 			//string red = mod1.ToString ();
 			string l1 = Convert.ToString (mod1, 16).ToUpper ();
@@ -114,8 +134,8 @@ namespace ColorManager
 			else
 				hax1 = l1;
 			//Green		
-			double b = clrbtn.Color.Green;
-			int mod2 = Convert.ToInt32 (b / 257);
+			double b = clrbtn.Rgba.Green * 255;
+			int mod2 = (int)b;
 			
 			//string green = mod2.ToString ();
 			string l2 = Convert.ToString (mod2, 16).ToUpper ();
@@ -127,8 +147,8 @@ namespace ColorManager
 			else
 				hax2 = l2;
 			//blue
-			double c = clrbtn.Color.Blue;
-			int mod3 = Convert.ToInt32 (c / 257);
+			double c = clrbtn.Rgba.Blue * 255;
+			int mod3 = (int)c;
 			
 			//string blue = mod3.ToString ();
 			string l3 = Convert.ToString (mod3, 16).ToUpper ();
@@ -170,7 +190,7 @@ namespace ColorManager
 					e1.Attribute ("COLOR").Value = clrCode;
 				//else
 				//	e1.Add ("Color",new XAttribute ("COLOR", clrCode));
-			} catch (Exception ex) {
+			} catch (Exception) {
 				XElement plelem = mgr.GetPalette (pltname).Single ();
 				XElement e = new XElement ("Color", new XAttribute ("COLOR", clrCode));
 				plelem.Add (e);
