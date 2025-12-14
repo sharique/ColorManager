@@ -4,19 +4,9 @@ namespace ColorManager
 {
 	internal partial class MyForm
 	{
-		private global::Gtk.UIManager UIManager;
+		private global::Gtk.Box vbox1;
 		
-		private global::Gtk.Action FileAction;
-		
-		private global::Gtk.Action quitAction;
-		
-		private global::Gtk.Action HelpAction;
-		
-		private global::Gtk.VBox vbox1;
-		
-		private global::Gtk.MenuBar menubar1;
-		
-		private global::Gtk.HBox hbox1;
+		private global::Gtk.Box hbox1;
 		
 		private global::Gtk.Label label1;
 		
@@ -26,7 +16,7 @@ namespace ColorManager
 		
 		private global::Gtk.Button btnDelete;
 		
-		private global::Gtk.HBox hbox2;
+		private global::Gtk.Box hbox2;
 		
 		private global::Gtk.Label label2;
 		
@@ -68,39 +58,15 @@ namespace ColorManager
 		{
 			global::Stetic.Gui.Initialize (this);
 			// Widget ColorManager.MyForm
-			this.UIManager = new global::Gtk.UIManager ();
-			global::Gtk.ActionGroup w1 = new global::Gtk.ActionGroup ("Default");
-			this.FileAction = new global::Gtk.Action ("FileAction", "_File", null, null);
-			this.FileAction.ShortLabel = "_File";
-			w1.Add (this.FileAction, null);
-			this.quitAction = new global::Gtk.Action ("quitAction", "_Quit", null, "gtk-quit");
-			this.quitAction.ShortLabel = "_Quit";
-			w1.Add (this.quitAction, null);
-			this.HelpAction = new global::Gtk.Action ("HelpAction", "_Help", null, null);
-			this.HelpAction.ShortLabel = "_Help";
-			w1.Add (this.HelpAction, null);
-			this.UIManager.InsertActionGroup (w1, 0);
-			this.AddAccelGroup (this.UIManager.AccelGroup);
 			this.Name = "ColorManager.MyForm";
 			this.Title = "Color Manager";
 			this.WindowPosition = ((global::Gtk.WindowPosition)(4));
 			// Container child ColorManager.MyForm.Gtk.Container+ContainerChild
-			this.vbox1 = new global::Gtk.VBox ();
+			this.vbox1 = new global::Gtk.Box (Gtk.Orientation.Vertical, 6);
 			this.vbox1.Name = "vbox1";
-			this.vbox1.Spacing = 6;
 			// Container child vbox1.Gtk.Box+BoxChild
-			this.UIManager.AddUiFromString ("<ui><menubar name='menubar1'><menu name='FileAction' action='FileAction'><menuitem name='quitAction' action='quitAction'/></menu><menu name='HelpAction' action='HelpAction'/></menubar></ui>");
-			this.menubar1 = ((global::Gtk.MenuBar)(this.UIManager.GetWidget ("/menubar1")));
-			this.menubar1.Name = "menubar1";
-			this.vbox1.Add (this.menubar1);
-			global::Gtk.Box.BoxChild w2 = ((global::Gtk.Box.BoxChild)(this.vbox1 [this.menubar1]));
-			w2.Position = 0;
-			w2.Expand = false;
-			w2.Fill = false;
-			// Container child vbox1.Gtk.Box+BoxChild
-			this.hbox1 = new global::Gtk.HBox ();
+			this.hbox1 = new global::Gtk.Box (Gtk.Orientation.Horizontal, 6);
 			this.hbox1.Name = "hbox1";
-			this.hbox1.Spacing = 6;
 			// Container child hbox1.Gtk.Box+BoxChild
 			this.label1 = new global::Gtk.Label ();
 			this.label1.Name = "label1";
@@ -148,13 +114,12 @@ namespace ColorManager
 			w8.Fill = false;
 			this.vbox1.Add (this.hbox1);
 			global::Gtk.Box.BoxChild w9 = ((global::Gtk.Box.BoxChild)(this.vbox1 [this.hbox1]));
-			w9.Position = 1;
+			w9.Position = 0;
 			w9.Expand = false;
 			w9.Fill = false;
 			// Container child vbox1.Gtk.Box+BoxChild
-			this.hbox2 = new global::Gtk.HBox ();
+			this.hbox2 = new global::Gtk.Box (Gtk.Orientation.Horizontal, 6);
 			this.hbox2.Name = "hbox2";
-			this.hbox2.Spacing = 6;
 			// Container child hbox2.Gtk.Box+BoxChild
 			this.label2 = new global::Gtk.Label ();
 			this.label2.Name = "label2";
@@ -186,7 +151,7 @@ namespace ColorManager
 			w12.Fill = false;
 			this.vbox1.Add (this.hbox2);
 			global::Gtk.Box.BoxChild w13 = ((global::Gtk.Box.BoxChild)(this.vbox1 [this.hbox2]));
-			w13.Position = 2;
+			w13.Position = 1;
 			w13.Expand = false;
 			w13.Fill = false;
 			// Container child vbox1.Gtk.Box+BoxChild
@@ -333,16 +298,16 @@ namespace ColorManager
 			w25.YOptions = ((global::Gtk.AttachOptions)(4));
 			this.vbox1.Add (this.table1);
 			global::Gtk.Box.BoxChild w26 = ((global::Gtk.Box.BoxChild)(this.vbox1 [this.table1]));
-			w26.Position = 3;
+			w26.Position = 2;
 			w26.Expand = false;
 			w26.Fill = false;
 			// Container child vbox1.Gtk.Box+BoxChild
 			this.colorselection1 = new global::Gtk.ColorSelection ();
 			this.colorselection1.Name = "colorselection1";
-			this.colorselection1.HasOpacityControl = true;
+			this.colorselection1.HasOpacityControl = false;
 			this.vbox1.Add (this.colorselection1);
 			global::Gtk.Box.BoxChild w27 = ((global::Gtk.Box.BoxChild)(this.vbox1 [this.colorselection1]));
-			w27.Position = 4;
+			w27.Position = 3;
 			// Container child vbox1.Gtk.Box+BoxChild
 			this.lblDebug = new global::Gtk.Label ();
 			this.lblDebug.Name = "lblDebug";
@@ -350,7 +315,7 @@ namespace ColorManager
 			this.lblDebug.SingleLineMode = true;
 			this.vbox1.Add (this.lblDebug);
 			global::Gtk.Box.BoxChild w28 = ((global::Gtk.Box.BoxChild)(this.vbox1 [this.lblDebug]));
-			w28.Position = 5;
+			w28.Position = 4;
 			w28.Expand = false;
 			w28.Fill = false;
 			this.Add (this.vbox1);
