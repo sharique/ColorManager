@@ -15,6 +15,30 @@ public partial class MainWindow : Gtk.Window
 	}
 	protected void FormLoad ()
 	{
+		// Create menu
+		var menubar = new Gtk.MenuBar();
+		var fileMenu = new Gtk.Menu();
+		var quitItem = new Gtk.MenuItem("_Quit");
+		quitItem.Activated += QuitClicked;
+		fileMenu.Append(quitItem);
+
+		var fileMenuItem = new Gtk.MenuItem("File");
+		fileMenuItem.Submenu = fileMenu;
+
+		var helpMenu = new Gtk.Menu();
+		var aboutItem = new Gtk.MenuItem("About Us");
+		// aboutItem.Activated += handler if needed
+		helpMenu.Append(aboutItem);
+
+		var helpMenuItem = new Gtk.MenuItem("Help");
+		helpMenuItem.Submenu = helpMenu;
+
+		menubar.Append(fileMenuItem);
+		menubar.Append(helpMenuItem);
+
+		vbox1.PackStart(menubar, false, false, 0);
+		vbox1.ReorderChild(menubar, 0);
+
 		//comboboxentry1.Clear();	
 		XmlDocument xdoc = new XmlDocument ();
 		xdoc.Load ("colors.xml");

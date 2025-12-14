@@ -20,6 +20,28 @@ namespace ColorManager
 
 		public void BuildForm ()
 		{
+			// Create menu
+			var menubar = new Gtk.MenuBar();
+			var fileMenu = new Gtk.Menu();
+			var quitItem = new Gtk.MenuItem("_Quit");
+			quitItem.Activated += (sender, e) => Gtk.Application.Quit();
+			fileMenu.Append(quitItem);
+
+			var fileMenuItem = new Gtk.MenuItem("File");
+			fileMenuItem.Submenu = fileMenu;
+
+			var helpMenu = new Gtk.Menu();
+			// No items for Help?
+
+			var helpMenuItem = new Gtk.MenuItem("Help");
+			helpMenuItem.Submenu = helpMenu;
+
+			menubar.Append(fileMenuItem);
+			menubar.Append(helpMenuItem);
+
+			vbox1.PackStart(menubar, false, false, 0);
+			vbox1.ReorderChild(menubar, 0);
+
 			LoadList ();
 		}
 

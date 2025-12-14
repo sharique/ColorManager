@@ -3,9 +3,9 @@
 
 public partial class MainWindow
 {
-	private global::Gtk.VBox vbox1;
+	private global::Gtk.Box vbox1;
 	
-	private global::Gtk.HBox hbox1;
+	private global::Gtk.Box hbox1;
 	
 	private global::Gtk.ComboBoxText comboboxentry1;
 	
@@ -15,7 +15,7 @@ public partial class MainWindow
 	
 	private global::Gtk.Button btnDelete;
 	
-	private global::Gtk.HBox hbox2;
+	private global::Gtk.Box hbox2;
 	
 	private global::Gtk.Label lblPaletteName;
 	
@@ -81,10 +81,10 @@ public partial class MainWindow
 		this.WindowPosition = ((global::Gtk.WindowPosition)(4));
 		this.DefaultWidth = 13;
 		// Container child MainWindow.Gtk.Container+ContainerChild
-			this.vbox1 = new global::Gtk.VBox (false, 6);
+			this.vbox1 = new global::Gtk.Box (Gtk.Orientation.Vertical, 6);
 			this.vbox1.Name = "vbox1";
 		// Container child vbox1.Gtk.Box+BoxChild
-		this.hbox1 = new global::Gtk.HBox (false, 6);
+		this.hbox1 = new global::Gtk.Box (Gtk.Orientation.Horizontal, 6);
 		this.hbox1.Name = "hbox1";
 		// Container child hbox1.Gtk.Box+BoxChild
 		this.comboboxentry1 = new global::Gtk.ComboBoxText ();
@@ -142,7 +142,7 @@ public partial class MainWindow
 		w10.Expand = false;
 		w10.Fill = false;
 		// Container child vbox1.Gtk.Box+BoxChild
-		this.hbox2 = new global::Gtk.HBox (false, 6);
+		this.hbox2 = new global::Gtk.Box (Gtk.Orientation.Horizontal, 6);
 		this.hbox2.Name = "hbox2";
 		// Container child hbox2.Gtk.Box+BoxChild
 		this.lblPaletteName = new global::Gtk.Label ();

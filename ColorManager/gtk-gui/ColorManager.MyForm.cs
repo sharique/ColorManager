@@ -4,9 +4,9 @@ namespace ColorManager
 {
 	internal partial class MyForm
 	{
-		private global::Gtk.VBox vbox1;
+		private global::Gtk.Box vbox1;
 		
-		private global::Gtk.HBox hbox1;
+		private global::Gtk.Box hbox1;
 		
 		private global::Gtk.Label label1;
 		
@@ -16,7 +16,7 @@ namespace ColorManager
 		
 		private global::Gtk.Button btnDelete;
 		
-		private global::Gtk.HBox hbox2;
+		private global::Gtk.Box hbox2;
 		
 		private global::Gtk.Label label2;
 		
@@ -62,10 +62,10 @@ namespace ColorManager
 			this.Title = "Color Manager";
 			this.WindowPosition = ((global::Gtk.WindowPosition)(4));
 			// Container child ColorManager.MyForm.Gtk.Container+ContainerChild
-			this.vbox1 = new global::Gtk.VBox (false, 6);
+			this.vbox1 = new global::Gtk.Box (Gtk.Orientation.Vertical, 6);
 			this.vbox1.Name = "vbox1";
 			// Container child vbox1.Gtk.Box+BoxChild
-			this.hbox1 = new global::Gtk.HBox (false, 6);
+			this.hbox1 = new global::Gtk.Box (Gtk.Orientation.Horizontal, 6);
 			this.hbox1.Name = "hbox1";
 			// Container child hbox1.Gtk.Box+BoxChild
 			this.label1 = new global::Gtk.Label ();
@@ -118,7 +118,7 @@ namespace ColorManager
 			w9.Expand = false;
 			w9.Fill = false;
 			// Container child vbox1.Gtk.Box+BoxChild
-			this.hbox2 = new global::Gtk.HBox (false, 6);
+			this.hbox2 = new global::Gtk.Box (Gtk.Orientation.Horizontal, 6);
 			this.hbox2.Name = "hbox2";
 			// Container child hbox2.Gtk.Box+BoxChild
 			this.label2 = new global::Gtk.Label ();
